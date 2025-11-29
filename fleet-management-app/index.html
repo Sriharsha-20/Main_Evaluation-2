@@ -3,9 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>fleet-management-app</title>
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css"8/>
 </head>
 <body>
-    <h1>email</h1>
+    <div class = "login">
+        <h2>Admin Login</h2>
+        <input type="text" id="email" placeholder="Enter password">
+        <button id="LoginBtn">Login</button>
+    </div>
+
+    <script>
+        const loginBtn =document.getElementById("btnlogin");
+
+        loginBtn.onclick = function() {
+            let typedEmail = document.getElementById("userEmail").value;
+            let typedPass = document.getElementById("userPass").value;
+
+            if (typedEmail === "admin@gmail.com" && typedPass === "admin1234") {
+                alert("Login Successfull");
+                window.location.href = "admin.html";
+            }
+           else {
+            alert("Invalid email or password");
+            }
+        };
+    </script>
 </body>
 </html>
